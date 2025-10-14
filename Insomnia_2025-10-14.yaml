@@ -1,0 +1,180 @@
+type: collection.insomnia.rest/5.0
+name: S1_R6-AT1_PBE1
+meta:
+  id: wrk_e3e1144e004349318dcc9060ace55daa
+  created: 1755607741104
+  modified: 1760450311815
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_0cf31aaac36a4ed3bcbf11a9828e39e5
+      created: 1755608134801
+      modified: 1760450172946
+      sortKey: -1760448893917
+      description: ""
+    children:
+      - url: localhost:8081/produtos
+        name: Cadastrar novo produto
+        meta:
+          id: req_c5b3a108f5e84f1fbaf863dd7f935e04
+          created: 1755607741309
+          modified: 1760441175781
+          isPrivate: false
+          description: ""
+          sortKey: -1755608159400
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeProduto":"Milkshake",
+            	"precoProduto":"16"
+            }
+        parameters:
+          - id: pair_48433e71c89648f3a3432550d15d4910
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Buscar todos os produtos
+        meta:
+          id: req_cf5a6975269b465f9ea7330cfff39a21
+          created: 1757433932538
+          modified: 1759859709522
+          isPrivate: false
+          description: ""
+          sortKey: -1755608159500
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              	"numeros": [8, 5, 6, 6]
+            }
+        parameters:
+          - id: pair_5d2df149fcc847dba4d8d2c41a76875a
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_8404c40bd392420f892203809681a82e
+      created: 1760441985694
+      modified: 1760450137024
+      sortKey: -1760448893817
+      description: ""
+    children:
+      - url: localhost:8081/clientes
+        name: Cadastrar novo cliente
+        meta:
+          id: req_1751eb2d6d46438bad3ce78bf722492c
+          created: 1760441993838
+          modified: 1760449226844
+          isPrivate: false
+          description: ""
+          sortKey: -1760441993838
+        method: POST
+        body:
+          mimeType: application/json
+          text: |2-
+                    {
+                        "nomeCliente": "Teste7",
+                        "cpfCliente": "700.000.000-00"
+                    }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: Buscar todos os clientes
+        meta:
+          id: req_a2deaa2dee4749c29721b6fc8adb74fe
+          created: 1760441996667
+          modified: 1760449220146
+          isPrivate: false
+          description: ""
+          sortKey: -1760441996667
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a7c9b7785d8543d8fed0486991b74fbcb905b0d4
+    created: 1755607741118
+    modified: 1755608073993
+  cookies:
+    - key: AEC
+      value: AVh_V2jGz6LAI1FDw7CsUgzv2SXUmicEUz6abPXW52ePIoN76ggJRY6QpTA
+      domain: google.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-08-19T12:53:51.280Z
+      lastAccessed: 2025-08-19T12:54:33.993Z
+      sameSite: lax
+      id: 6898c8d3-eb07-4b8c-a72e-812d7511568f
+    - key: NID
+      value: 525=RxhqT7d7kSST3tLplUAA7vxjtCHV3P8MpaOfdhIr5cCwF5IxaG5vxvoKt0hHQ2gfYoiMk8WVkp7iuvew4tftUk5EFGpydenS7Nve30_WgHVpwYzShx1ea1HO0xDSkSDLT2rRaeyXzTJZUCRfw1Pzw2_k1Xa_nMVUI0C6cAbzYFtbV3uOdMkBh2HnGXIz4DGROSneNQ9vgeq9fApPKw
+      domain: google.com
+      path: /
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-08-19T12:53:51.281Z
+      lastAccessed: 2025-08-19T12:53:51.281Z
+      id: fe275f8e-908f-46d8-92c5-3fe0995965b9
+environments:
+  name: Base Environment
+  meta:
+    id: env_a7c9b7785d8543d8fed0486991b74fbcb905b0d4
+    created: 1755607741111
+    modified: 1755607741111
+    isPrivate: false
