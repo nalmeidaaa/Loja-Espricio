@@ -37,9 +37,6 @@ const clienteModel = {
         }
     },
 
-
-
-
     inserirCliente: async (nomeCliente, cpfCliente) => {
         try {
 
