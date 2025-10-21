@@ -3,7 +3,7 @@
 ### Produtos
 
 #### GET /produtos
-- **Descrição**: Obtém uma lista de produtos
+- **Descrição**: Obtém uma lista de produtos. Se colocar um idProduto no query params, aparecerá apenas o produto especificado
 - **Response**: Array de produtos
 
 #### POST /produtos

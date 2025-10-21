@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { produtoController } = require("../controllers/produtoController");
 
-// GET /produtos -> Lista todos os produtos
+// GET /produtos -> Lista todos os produtos. Se colocar um idProduto no query params, aparecerá apenas o produto especificado
 router.get("/produtos", produtoController.listarProdutos);
 
 // POST /produtos -> Cria um novo produto

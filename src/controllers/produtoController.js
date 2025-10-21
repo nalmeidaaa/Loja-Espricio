@@ -8,12 +8,22 @@ const produtoController = {
 
     listarProdutos: async (req, res) => {
         try {
-            const produtos = await produtoModel.buscarTodos();
+            const { idProduto } = req.query; // Esse query pede o idProduto
 
-            res.status(200).json(produtos);
+            if (idProduto) { //
+                if (idProduto.length != 36) { // Verifica se o idProduto tem 36 caracteres 
+                    return res.status(400).json({ erro: 'id do produto inválido' });
+                }
+
+                const produto = await produtoModel.buscarUm(idProduto);
+                return res.status(200).json(produto);
+            }
+            
+            const produtos = await produtoModel.buscarTodos();
+            res.status(200).json(produtos);   
         } catch (error) {
-            console.error('Erro ao listar produtos:', error);
-            res.status(500).json({ message: 'Erro ao buscar produtos.' });
+            console.error('Erro ao listar produto:', error);
+            res.status(500).json({ message: 'Erro ao buscar produto.' });
         }
     },
 
